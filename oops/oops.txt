@@ -1,0 +1,62 @@
+A-PIE => abstraction,polymorphism,Encapsulation,Inheritance.
+
+#abstraction 	- it is process oh hidding and encapsulating complex code so it is easiar to use
+				- The idea of representing significant details and hiding details of functionality is called data abstraction.
+				- the way to do abstraction
+					1)using modules - sqrt() method is there but inner process is hidden we just simply put number and get val
+					2)using class - using method private,public,protected we can define which information is visible and not(method)
+					3)using access control -
+					public, private, protetced whether member is accesable or not.
+
+#Polymorphism 	- method overloading and overriding.
+				- overloading is not supported.
+				- polymorphism using inheritance - simple create object and call
+				- polymorphism using duck-typeing - one class manage property and call other class
+
+#Encapsulation 	- hide the implementation details of class from other objects.(prevent data access from outside)
+		- it is the mechanism that bind together code and the date it manipulates.it is protactive shield
+		- accessors and setter method - 
+			1)attr_reader - creates getter methods 
+			attr_reader :name - this how we can define - it means method name is name inside @name variable name is declare.
+			- it will simply return instance variable.
+			- we can read the name but not assign the name
+			2)attr_writer - create setter method and instance variables for this setter
+			attr_writer :age - it means method name age with argument for assign value and inside we can decalre and assign @age variable
+			- it will allow to change val of instace variable
+			3)attr_accessor - method that create getter,setter  method and instance variable for this setter
+			attr_accessor :hair_color - we can define -it will do both return the variable and assign value with differnt method
+			def hair_color
+  				@hair_color
+			end
+			def hair_color=(value)
+  				@hair_color=value
+			end
+		# Without a getter method, you can not retrieve a value of an instance variable outside the class the instance variable is instantiated from.
+		# Without a setter method, you can not assign a value to an instance variable outside its class.
+
+		
+
+		- access control -public ,private, protected
+							in other language private method is not inherited from parent but in ruby it is possible		
+			
+		- self - it will defined current object,define class level method, to see in which object we are working with
+
+#Inheritance 	- it way ro foem new class using classes that have already been defined. (parent-child).
+				Single Inheritance. - simple
+				Multiple Inheritance. - child have two parent
+				Multilevel Inheritance. - classA -> ClassB -> ClassC
+				Hierarchical Inheritance. - one parent have more than one child class
+				Hybrid Inheritance. - single+multiple
+				- ruby does not support multiple inheritance that is why modules are used in group related classes. methods and constant can be put in separate modules
+					in modules we can create method using include and extend key word we can access multiple modules
+				- include modules works as instance methods of class
+  				- extend modules works as class methods of class
+				- here we are using mixin instead of multilevel and multiple inheritance
+
+  
+
+
+#constructor - 	it is initialize method. it autometically called when class object is created
+	     -	using allocate method we can create object without calling constructor
+			
+#allocate method-> it will create object without calling constructor
