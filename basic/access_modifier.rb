@@ -2,7 +2,7 @@ class Employee
     def initialize(exp)
         @experience = exp
     end
-
+    #hii
     private
         def setSalary(salary)
             @salary = salary
